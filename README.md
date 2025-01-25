@@ -20,6 +20,7 @@ Supported coins are as follows:
 - Cortex (ctxc)
 - Ethereum Classic (etc)
 - Ethereum (eth)
+- Ethereum PoW (ethw)
 - Metaverse ETP (etp)
 - Ergo (erg)
 - Expanse (exp)
