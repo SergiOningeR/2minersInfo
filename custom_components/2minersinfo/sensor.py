@@ -23,6 +23,8 @@ from .const import (
     SOLO_ZEN_API_ENDPOINT,
     ETH_API_ENDPOINT,
     SOLO_ETH_API_ENDPOINT,
+    ETHW_API_ENDPOINT,
+    SOLO_ETH_API_ENDPOINT,
     ERG_API_ENDPOINT,
     SOLO_ERG_API_ENDPOINT,
     ETC_API_ENDPOINT,
@@ -232,7 +234,14 @@ class InfoSensor(Entity):
             if self.solo.lower() == "true":
               self.api_endpoint = SOLO_ETH_API_ENDPOINT
             else:
-              self.api_endpoint = ETH_API_ENDPOINT        
+              self.api_endpoint = ETH_API_ENDPOINT       
+        if self.token.lower() == "ethw":
+            self._icon = "mdi:ethereumpow"
+            self.token_name = "ethereumpow"
+            if self.solo.lower() == "true":
+              self.api_endpoint = SOLO_ETHW_API_ENDPOINT
+            else:
+              self.api_endpoint = ETHW_API_ENDPOINT         
         if self.token.lower() == "erg":
             self._icon = "mdi:diamond"
             self.token_name = "ergo"
